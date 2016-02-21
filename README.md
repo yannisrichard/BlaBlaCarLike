@@ -7,6 +7,7 @@ Instructions :
 2 	 - Deployer le projet BlaBlaCar.
 3 	 - Aller sur : http://localhost:8080/BlaBlaCar-war/index.faces
 
+
 Configuration :
 IDE : Netbeans 
 PROJET : Java EE7
