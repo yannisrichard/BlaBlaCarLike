@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:b="http://bootsfaces.net/ui">
+    
+    <h:head>
+        <title>Créer un Trajet </title>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+                <h:outputLabel for="lastName">Nom : </h:outputLabel>
+                <b:inputText id="lastName" value="#{manageBean.UserManageBean.user.lastName}"></b:inputText>
+                <br/>
+                <h:outputLabel for="firstName">Prénom : </h:outputLabel>
+                <b:inputText id="firstName" value="#{manageBean.UserManageBean.user.firstName}"></b:inputText>
+                <br/>
+                <h:outputLabel for="placeStart">Départ : </h:outputLabel>
+                <b:inputText id="placeStart" value="#{manageBean.UserManageBean.travel.placeStart}"></b:inputText>
+                <br/>
+                <h:outputLabel for="placeEnd">Arrivée : </h:outputLabel>
+                <b:inputText id="placeEnd" value="#{manageBean.UserManageBean.travel.placeEnd}"></b:inputText>
+                <br/>
+                <h:outputLabel for="date">Date (yyyy-mm-dd) : </h:outputLabel>
+                <b:inputText id="date"  value="#{manageBean.UserManageBean.travel.start}">
+                   <f:convertDateTime pattern="yyyy-mm-dd"/>
+                </b:inputText>
+                <br/>
+                <br/>
+                <h:outputLabel for="price">Prix : </h:outputLabel>
+                <b:inputText id="price"  value="#{manageBean.UserManageBean.travel.price}"></b:inputText>
+                <br/>
+                <h:outputLabel for="nbSeatTotal">Total du nombre de places : </h:outputLabel>
+                <b:inputText id="nbSeatTotal" value="#{manageBean.UserManageBean.travel.nb_seat_total}"></b:inputText>
+                <br/>
+                <b:commandButton type="submit" action="#{manageBean.UserManageBean.createTravel()}" value="Ajouter ce voyage"></b:commandButton>
+            
+        </h:form>
+    </h:body>
+</html>

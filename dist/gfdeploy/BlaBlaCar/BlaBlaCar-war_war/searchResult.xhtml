@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Recherche</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h1>Recherche</h1>
+        
+        <ul>
+        <ui:repeat value="#{manageBean.TravelManageBean.lst}" var="travel">
+            <li>
+            Lieu de départ : 
+            <h:outputLabel value="#{travel.placeStart}" />
+            <br/>Lieu d'arrivée : 
+            <h:outputLabel value="#{travel.placeEnd}" />
+            <br/>Date de départ : 
+            <h:outputLabel value="#{travel.start}" />
+            <br/>Nombre de places disponibles dans la voiture : 
+            <h:outputLabel value="#{travel.nb_seat_available}" />
+            sur 
+            <h:outputLabel value="#{travel.nb_seat_total}" />
+            <br/>Prix : 
+            <h:outputLabel value="#{travel.price}" />
+            
+            </li>
+        </ui:repeat>
+        </ul>
+            
+    </h:body>
+</html>
+
+
+

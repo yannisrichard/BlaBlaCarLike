@@ -1,0 +1,37 @@
+Bilan :
+Ce projet a été réalisé par RICHARD Yannis et THUAIRE Clément
+
+Instructions :
+1 	 - Lancer le main afin de créer les tables de la base de données.
+1bis - (Si il y a une erreur vérifier que Netbeans se connecte bien à la bdd voir Configuration)
+2 	 - Deployer le projet BlaBlaCar.
+3 	 - Aller sur : http://localhost:8080/BlaBlaCar-war/index.faces
+
+Configuration :
+IDE : Netbeans 
+PROJET : Java EE7
+SERVEUR : GlassFish Server 4.1
+
+BDD (Créer par défault sur mon Netbeans) :
+Database Name : sample
+User Name : app
+Password : app
+
+Sinon aller dans Services, Databases, clic droit sur JAVA DB, Create Database.
+
+Compte Rendu :
+La partie JPA fonctionne bien avec la création de trois pojos dans le package entities (Car, User, Travel).
+L'entity User a été renommé USER2 dans la Base de Données car Netbeans rencontré un problème si la table s'appelait USER, du coup on a laissé USER2 comme vous nous l'avez dit en cours.
+La persistance avec le fichier persistance.xml fonctionne. Lorsque l'on teste avec notre fichier Main la création des tables et l'enregistrement des données fonctionnes.
+Au niveau EJB, nous avons créer 2 Web Services dans le package WS (TRAJETWS, USERWS) de BlaBlaCar-ejb ainsi que dans BlaBlaCar-war nous avons créer un package manageBean pour TravelManageBean et UserManageBean. 
+Au niveau JSF, nous avons 3 pages, index.xhtml qui est la page d'index de notre projet et qui nous permet de rechercher un trajet, ainsi que createTravel.xhtml qui est inclus dans l'index et qui nous permet d'ajouter un trajet. 
+La dernière page est SearchResult.xhtml qui affiche la recherche d'un de nos trajet.
+Pour nos pages JSF nous avons inclus la librairies BoostFace qui est un framework Bootstrap pour JSF.
+
+Problème :
+Le projet compile correctement, et la base de données fonctionne également.
+Quand on va sur la page localhost:8080/BlaBlaCar-war/index.faces nous avons bien notre page d'index mais après nous avons des erreurs 500 lors de l'utilisation de nos webservices car notre application ne trouve pas nos ManageBean.
+
+Erreur :
+HTTP Status 500 - Internal Server Error
+javax.el.PropertyNotFoundException: Target Unreachable, identifier 'manageBean' resolved to null

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <from-view-id>/index.html</from-view-id>
+        <url-pattern>/*.faces</url-pattern>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>FacesServlet</managed-bean-name>
+        <managed-bean-class>manageBean.UserManageBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+</faces-config>
